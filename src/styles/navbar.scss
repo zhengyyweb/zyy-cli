@@ -1,0 +1,11 @@
+.navbar-container{
+    margin-left:$sideBarWidth;
+    width:calc(100% - #{$sideBarWidth});
+    height:$navbarHeight;
+    background-color: $navBg;
+    padding-top: 20px;
+
+}
+
+
+

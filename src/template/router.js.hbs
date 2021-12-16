@@ -1,0 +1,25 @@
+
+export default [
+  {{#each RouterList}}
+  {
+    path: '/{{files}}',
+    name: '{{name}}',
+    component: '{{component}}',
+    {{!-- component: '{{name}}/index', --}}
+    meta: { title: '平台首页', icon: '{{name}}' },
+    {{#equal length 1}}
+      children:[
+        {{#each child}}
+            {
+              path: '/{{file}}',
+              name: '{{name}}',
+              component: '{{file}}',
+              meta: { title: '平台首页', icon: '{{name}}' },
+            },
+        {{/each}}
+        ]
+     {{/equal}}
+  },
+  {{/each}}
+]
+
